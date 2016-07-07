@@ -47,6 +47,7 @@ You can ask Trip.js go back to top when ended.
 + Type : `Boolean`
 + Default : `false`
 
+
 ### overlayZindex
 
 You can set the basic zIndex for overlay if you want to expose elements.
@@ -75,12 +76,14 @@ You can enable animations on tripBlock.
 + Type : `Boolean`
 + Default : `true`
 
+
 ### showCloseBox
 
 You can decide to add small close icon on each trip or not
 
 + Type : `Boolean`
 + Default : `false`
+
 
 ### showSteps
 
@@ -154,12 +157,14 @@ Label for the finish button.
 + Type : `String`
 + Default : `'Dismiss'`
 
+
 ### animation
 
 Animation that would be applied on the tripBlock.
 
 + Type : `String`
 + Default : `'tada'`
+
 
 ### canGoPrev
 
@@ -289,79 +294,41 @@ If there is any specific trip that needs a customized **Next** button instead of
 
 ### delay
 
-Check documentations above.
-
 ### header
-
-Check documentations above.
 
 ### showHeader
 
-Check documentations above.
-
 ### canGoPrev
-
-Check documentations above.
 
 ### canGoNext
 
-Check documentations above.
-
 ### animation
-
-Check documentations above.
 
 ### showNavigation
 
-Check documentations above.
-
 ### showCloseBox
-
-Check documentations above.
 
 ### showSteps
 
-Check documentations above.
-
 ### prevLabel
-
-Check documentations above.
 
 ### nextLabel
 
-Check documentations above.
-
 ### skipLabel
-
-Check documentations above.
 
 ### finishLabel
 
-Check documentations above.
-
 ### onTripStart(tripIndex, tripObject)
-
-Check documentations above.
 
 ### onTripEnd(tripIndex, tripObject)
 
-Check documentations above.
-
 ### onTripStop(tripIndex, tripObject)
-
-Check documentations above.
 
 ### onTripPause(tripIndex, tripObject)
 
-Check documentations above.
-
 ### onTripResume(tripIndex, tripObject)
 
-Check documentations above.
-
 ### onTripChange(tripIndex, tripObject)
-
-Check documentations above.
 
 ### onTripClose(tripIndex, tripObject)
 
@@ -371,23 +338,13 @@ Check documentations above.
 
 ### data-trip-index
 
-Check documentations above.
-
 ### data-trip-content
-
-Check documentations above.
 
 ### data-trip-delay
 
-Check documentations above.
-
 ### data-trip-position
 
-Check documentations above.
-
 ### data-trip-animation
-
-Check documentations above.
 
 ### data-trip-expose
 
