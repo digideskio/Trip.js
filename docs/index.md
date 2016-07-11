@@ -1,5 +1,3 @@
-# Trip.js
-
 ![trip.js](images/logo-tiny.png)
 
 # What is Trip.js

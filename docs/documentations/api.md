@@ -35,6 +35,8 @@ After a while, you want to make the paused trip back to work, you will need this
 
 Jump to the next step by default. If you do pass `tripIndex` into this method, then you can directly jump to that step.
 
+** Note: ** If you do put `tripIndex` here, for most cases, it means that no matter what `canGoNext()` value is, you are keen to go there, so that value will be ignored. (This is a small change from 3.3.0+)
+
 ## trip.prev()
 
 Jump back to previous step.

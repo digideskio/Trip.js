@@ -2,7 +2,7 @@
 
 In this chapter, we will tell you how to setup Trip.js properly steps by steps.
 
-## Where to find Trip.js ?
+## How to install Trip.js ?
 
 ### GitHub
 
