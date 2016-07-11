@@ -3,6 +3,12 @@ site_url: http://eragonj.github.io/Trip.js
 repo_url: https://github.com/EragonJ/Trip.js
 
 theme: cosmo
+extra_css:
+  - vendor/trip.js/trip.min.css
+extra_javascript:
+  - vendor/trip.js/trip.min.js
+  - js/bootup.js
+  - js/demo.js
 pages:
   - Home: 'index.md'
   - Documentations:
