@@ -4,7 +4,7 @@ require([
   $(document).ready(function() {
 
     // Demo - Change position
-    var tripToChangeTheme = new Trip([
+    var tripToChangePosition = new Trip([
       { sel : $(".demo-change-position.step1"), content : "North", position : "n" },
       { sel : $(".demo-change-position.step2"), content : "East",  position : "e" },
       { sel : $(".demo-change-position.step3"), content : "South", position : "s" },
@@ -14,7 +14,7 @@ require([
     });
 
     $(".demo-change-position").on("click", function() {
-      tripToChangeTheme.start();
+      tripToChangePosition.start();
     });
 
     // Demo - Change theme

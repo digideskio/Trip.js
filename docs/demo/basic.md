@@ -5,7 +5,7 @@
 <button class="demo-change-position step1 step2 step3 step4">Run this demo</button>
 
 ```javascript
-var tripToChangeTheme = new Trip([
+var tripToChangePosition = new Trip([
   { sel : $(".demo-change-position.step1"), content : "North", position : "n" },
   { sel : $(".demo-change-position.step2"), content : "East",  position : "e" },
   { sel : $(".demo-change-position.step3"), content : "South", position : "s" },
@@ -15,7 +15,7 @@ var tripToChangeTheme = new Trip([
 });
 
 $(".demo-change-position").on("click", function() {
-  tripToChangeTheme.start();
+  tripToChangePosition.start();
 });
 ```
 
