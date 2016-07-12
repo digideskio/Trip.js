@@ -2,20 +2,20 @@
 
 # Change position
 
-<button>Run this demo</button>
+<button class="demo-change-position step1 step2 step3 step4">Run this demo</button>
 
 ```javascript
-var trip1 = new Trip([
-  { sel : $(".demo-basic-1.step1"), content : "North", position : "n" },
-  { sel : $(".demo-basic-1.step2"), content : "East",  position : "e" },
-  { sel : $(".demo-basic-1.step3"), content : "South", position : "s" },
-  { sel : $(".demo-basic-1.step4"), content : "West",  position : "w" }
+var tripToChangeTheme = new Trip([
+  { sel : $(".demo-change-position.step1"), content : "North", position : "n" },
+  { sel : $(".demo-change-position.step2"), content : "East",  position : "e" },
+  { sel : $(".demo-change-position.step3"), content : "South", position : "s" },
+  { sel : $(".demo-change-position.step4"), content : "West",  position : "w" }
 ], {
   
 });
 
-$(".start-demo-basic-1").on("click", function() {
-  trip1.start();
+$(".demo-change-position").on("click", function() {
+  tripToChangeTheme.start();
 });
 ```
 
@@ -23,12 +23,14 @@ Check its [documentation](../documentations/configuration.md#position) for more 
 
 # Change theme
 
+<button class="demo-change-theme step1 step2 step3 step4">Run this demo</button>
+
 ```javascript
-var trip2_1 = new Trip([
-  { sel : $(".demo-basic-2.step1"), content : "North", position : "n" },
-  { sel : $(".demo-basic-2.step2"), content : "East",  position : "e" },
-  { sel : $(".demo-basic-2.step3"), content : "South", position : "s" },
-  { sel : $(".demo-basic-2.step4"), content : "West",  position : "w" }
+var tripToChangeTheme = new Trip([
+  { sel : $(".demo-change-theme.step1"), content : "North", position : "n" },
+  { sel : $(".demo-change-theme.step2"), content : "East",  position : "e" },
+  { sel : $(".demo-change-theme.step3"), content : "South", position : "s" },
+  { sel : $(".demo-change-theme.step4"), content : "West",  position : "w" }
 ], {
   tripTheme : "white",
   onStart : function() {
@@ -39,25 +41,27 @@ var trip2_1 = new Trip([
   }
 });
 
-$(".start-demo-basic-2-1").on("click", function() {
-  trip2_1.start();
+$(".demo-change-theme").on("click", function() {
+  tripToChangeTheme.start();
 });
 ```
 
 Check its [documentation](../documentations/configuration.md#triptheme) for more supported themes.
 
-# Scoll top top when finished
+# Scoll to top when finished
+
+<button class="demo-scroll-to-top step1">Run this demo</button>
 
 ```javascript
-var trip3 = new Trip([
-  { sel : $(".demo-basic-3.step1"), content : "Let's fly ...", position : "e" }
+var tripToScrollToTop = new Trip([
+  { sel : $(".demo-scroll-to-top.step1"), content : "Let's fly ...", position : "e" }
 ], {
   backToTopWhenEnded : true,
-  delay : 3000
+  delay : 2000
 });
 
-$(".start-demo-basic-3").on("click", function() {
-  trip3.start();
+$(".demo-scroll-to-top").on("click", function() {
+  tripToScrollToTop.start();
 });
 ```
 
@@ -65,18 +69,20 @@ Check its [documentation here](../documentations/configuration.md#backtotopwhene
 
 # Show close box and navigation buttons
 
+<button class="demo-show-navigation step1 step2">Run this demo</button>
+
 ```javascript
-var trip4 = new Trip([
-  { sel : $(".demo-basic-4.step1"), content : "Hola!", position : "n" },
-  { sel : $(".demo-basic-4.step2"), content : "Adios!", position : "s" }
+var tripToShowNavigation = new Trip([
+  { sel : $(".demo-show-navigation.step1"), content : "Hola!", position : "n" },
+  { sel : $(".demo-show-navigation.step2"), content : "Adios!", position : "s" }
 ], {
   showNavigation : true,
   showCloseBox : true,
   delay : -1
 });
 
-$(".start-demo-basic-4").on("click", function() {
-  trip4.start();
+$(".demo-show-navigation").on("click", function() {
+  tripToShowNavigation.start();
 });
 ```
 
@@ -86,11 +92,15 @@ Check documentation about [showNavigation](../documentations/configuration.md#sh
 
 # Global options
 
+> Please use inspector to check logs before starting this trip
+
+<button class="demo-global-options step1 step2 step3">Run this demo</button>
+
 ```
-var trip5 = new Trip([
-  { sel : $(".demo-basic-5.step1"), content : "Hi", position : "n" },
-  { sel : $(".demo-basic-5.step2"), content : "Press ESC to stop this step !", position : "s", delay : 3000, myFunction : function() { return "this is user's function"; } },
-  { sel : $(".demo-basic-5.step3"), content : "Click the close icon to see what's going on in your console log", delay: -1, showCloseBox: true }
+var tripToCheckGlobalOptions = new Trip([
+  { sel : $(".demo-global-options.step1"), content : "Hi", position : "n" },
+  { sel : $(".demo-global-options.step2"), content : "Press ESC to stop this step !", position : "s", delay : 3000, myFunction : function() { return "this is user's function"; } },
+  { sel : $(".demo-global-options.step3"), content : "Click the close icon to see what's going on in your console log", delay: -1, showCloseBox: true }
 ], {
   onStart : function() {
     console.log("onStart");
@@ -102,7 +112,7 @@ var trip5 = new Trip([
     console.log("onTripStop");
   },
   onTripChange : function(i, tripData) {
-    if ( i === 1 ) {
+    if (i === 1) {
       console.log("You can put your own function or data in tripData andaccess it onTripChange !");
       console.log("current tripIndex : " + i);
       console.log("current tripData : ", tripData);
@@ -114,21 +124,27 @@ var trip5 = new Trip([
   }
 });
 
-$(".start-demo-basic-5").on("click", function() {
-  trip5.start();
+$(".demo-global-options").on("click", function() {
+  tripToCheckGlobalOptions.start();
 });
 ```
 
-Check its [documentation here](../documentations/configuration.md#global-options).
+Check its [documentation](../documentations/configuration.md#global-options) for more supported options;
+
+**Note : ** There are tons of settings that you can tweak, please remember to check other missing settings.
 
 # Local options
 
 > Supported after 2.0.0+
 
+> Please use inspector to check logs before starting this trip
+
+<button class="demo-local-options step1 step2">Run this demo</button>
+
 ```javascript
-var trip6 = new Trip([
+var tripToCheckLocalOptions = new Trip([
   { 
-    sel: $('.demo-basic-6.step1'),
+    sel: $('.demo-local-options.step1'),
     content: 'onTripStart will be called when entering this trip',
     onTripStart: function(tripIndex) {
       console.log('onTripStart : ', tripIndex);
@@ -138,41 +154,41 @@ var trip6 = new Trip([
     }
   },
   {
-    sel: $('.demo-basic-6.step2'),
-    content: 'We will use global onTripStart if there is no local one'
+    sel: $('.demo-local-options.step2'),
+    content: 'We will use global onTripStart if there is no local one',
     onTripEnd: function(tripIndex) {
       console.log('onTripEnd : ', tripIndex);
     }
   }
 ], {
+  delay: 3000,
   onTripStart: function(tripIndex) {
     console.log('default onTripStart : ', tripIndex);
   }
 });
 
-$('.start-demo-basic-6').on('click', function() {
-  trip6.start();
+$('.demo-local-options').on('click', function() {
+  tripToCheckLocalOptions.start();
 });
 ```
 
-Check its [documentation here](../documentations/configuration.md#local-options).
+Check its [documentation](../documentations/configuration.md#local-options) for more supported options;
 
 **Note :** If local options exist, then global options will be suppressed by default !
 
 # Highlight target
 
+<button class="demo-highlight step1">Run this demo</button>
+
 ```
-var trip7 = new Trip([
-  { sel : $(".demo-basic-7.step1"), content : "Highlight this", expose : true },
-  { sel : $(".demo-basic-7.step2"), content : "Highlight multiple elements with selector or jQuery object", expose : '.demo-basic-7.step1, .start-demo-basic-7' },
-  { sel : $(".demo-basic-7.step3"), content : "No highlight" },
-  { sel : $(".demo-basic-7.step4"), content : "Highlight that", expose : true }
+var tripToHighlight = new Trip([
+  { sel : $(".demo-highlight.step1"), content : "Highlight this", expose : true }
 ], {
   delay : 3000
 });
 
-$(".start-demo-basic-7").on("click", function() {
-  trip7.start();
+$(".demo-highlight").on("click", function() {
+  tripToHighlight.start();
 });
 ```
 
@@ -182,23 +198,25 @@ Check its [documentation here](../documentations/configuration.md#expose).
 
 > Powered by animate.css
 
+<button class="demo-animation step1 step2 step3 step4 step5 step6 step7 step8">Run this demo</button>
+
 ```javascript
-var trip8 = new Trip([
-  { sel : $(".demo-basic-8.step1"), content : "hi"},
-  { sel : $(".demo-basic-8.step2"), content : "hi", animation: 'bounce'},
-  { sel : $(".demo-basic-8.step3"), content : "hi", animation: 'shake'},
-  { sel : $(".demo-basic-8.step4"), content : "hi", animation: 'fadeIn'},
-  { sel : $(".demo-basic-8.step5"), content : "hi", animation: 'fadeInUp'},
-  { sel : $(".demo-basic-8.step6"), content : "hi", animation: 'fadeInDown'},
-  { sel : $(".demo-basic-8.step7"), content : "hi", animation: 'fadeInLeft'},
-  { sel : $(".demo-basic-8.step8"), content : "hi", animation: 'rotateInUpRight'}
+var tripToChangeAnimation = new Trip([
+  { sel : $(".demo-animation.step1"), content : "hi"},
+  { sel : $(".demo-animation.step2"), content : "hi", animation: 'bounce'},
+  { sel : $(".demo-animation.step3"), content : "hi", animation: 'shake'},
+  { sel : $(".demo-animation.step4"), content : "hi", animation: 'fadeIn'},
+  { sel : $(".demo-animation.step5"), content : "hi", animation: 'fadeInUp'},
+  { sel : $(".demo-animation.step6"), content : "hi", animation: 'fadeInDown'},
+  { sel : $(".demo-animation.step7"), content : "hi", animation: 'fadeInLeft'},
+  { sel : $(".demo-animation.step8"), content : "hi", animation: 'rotateInUpRight'}
 ], {
-  delay : 3000,
+  delay : 1500,
   animation: 'tada'
 });
 
-$(".start-demo-basic-8").on("click", function() {
-  trip8.start();
+$(".demo-animation").on("click", function() {
+  tripToChangeAnimation.start();
 });
 ```
 
