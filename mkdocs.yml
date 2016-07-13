@@ -19,4 +19,3 @@ pages:
     - 'Theme': 'documentations/theme.md'
   - Demo:
     - 'Basic': 'demo/basic.md'
-    - 'Highly Customized': 'demo/customized.md'
