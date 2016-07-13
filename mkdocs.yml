@@ -9,6 +9,7 @@ extra_javascript:
   - vendor/trip.js/trip.min.js
   - js/bootup.js
   - js/demo.js
+  - js/documentation.js
 pages:
   - Home: 'index.md'
   - Documentations:
