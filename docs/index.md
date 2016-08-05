@@ -10,4 +10,4 @@ Trip.js has been tested and it works well on **IE 9+**, **Chrome 32+**, **Firefo
 
 # Latest version
 
-3.2.2
+3.3.3
